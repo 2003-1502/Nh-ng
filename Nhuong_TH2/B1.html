@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="color: red;">BÀI 1:</p>
+    <center>
+        <H1>GIẢI PHƯƠNG TRÌNH BẬC I</H1>
+    <input type="text" id="a" placeholder="Hệ số a"></br>
+    <input type="text" id="b" placeholder="Hệ số b"></br>
+    <button onclick="giaiPhuongTrinh()">Giải Phương Trình</button>
+    <h3>KẾT QUẢ</h3>
+    <p id="ketQua"></p>
+
+    <script>
+        function giaiPhuongTrinh() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            if (isNaN(a)) {
+                alert('Vui lòng nhập giá trị số cho a');
+                return;
+            }
+            var x = -b / a;
+            document.getElementById('ketQua').innerHTML = 'Nghiệm của phương trình là: x = ' + x;
+        }
+    </script>
+    </center>
+</body>
+</html>
